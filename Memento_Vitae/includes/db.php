@@ -7,7 +7,7 @@ require_once __DIR__ . '/PHPMailer/src/Exception.php';
 require_once __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer/src/SMTP.php';
 
-$conn = mysqli_connect("localhost", "root", "", "deathnotes");
+$conn = mysqli_connect("localhost", "root", "", "mementovitae");
 if (!$conn) {
     die("DB connection failed: " . mysqli_connect_error());
 }
