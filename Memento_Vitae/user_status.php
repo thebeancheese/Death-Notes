@@ -59,7 +59,7 @@ $result = mysqli_stmt_get_result($stmt);
     th { color:#fff; }
   </style>
 </head>
-<body class="app-content-page">
+<body>
 
 <div class="wrap">
   <div class="card" style="max-width:none; text-align:left;">

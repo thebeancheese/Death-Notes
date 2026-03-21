@@ -66,7 +66,7 @@ $record_page = "user_record_view.php";
   <title>Memento Vitae - Notifications</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="app-content-page">
+<body>
 
 <div class="page-shell">
   <div class="card" style="max-width:none; text-align:left;">

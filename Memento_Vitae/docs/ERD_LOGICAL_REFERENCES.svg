@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="940" viewBox="0 0 1320 940">
+<style>
+text { font-family: Arial, Helvetica, sans-serif; fill: #1f2937; }
+.title { font-size: 14px; font-weight: 700; fill: #ffffff; }
+.field { font-size: 12px; }
+.label { font-size: 11px; font-weight: 700; fill: #0f172a; }
+.legend { font-size: 12px; }
+</style>
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="40" y="28" style="font-size:22px;font-weight:700;fill:#0f172a;">Memento Vitae Logical References</text>
+<text x="40" y="48" class="legend">Supporting diagram for references used by the PHP application but not enforced as foreign keys.</text>
+<polyline points="430,314 680,298 680,182 930,198" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="624" y="221" width="112" height="18" rx="6" fill="#f8fafc"/>
+<text x="680" y="234" class="label" text-anchor="middle">user_id</text>
+<text x="436" y="308" class="label">1</text>
+<text x="902" y="192" class="label">many</text>
+<polyline points="850,338 890,354 890,214 930,198" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="821" y="265" width="139" height="18" rx="6" fill="#f8fafc"/>
+<text x="890" y="278" class="label" text-anchor="middle">related_record_id</text>
+<text x="856" y="332" class="label">0..1</text>
+<text x="902" y="192" class="label">many</text>
+<polyline points="430,314 680,290 680,560 930,584" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="624" y="406" width="112" height="18" rx="6" fill="#f8fafc"/>
+<text x="680" y="419" class="label" text-anchor="middle">actor_user_id</text>
+<text x="436" y="308" class="label">1</text>
+<text x="902" y="578" class="label">many</text>
+<polyline points="430,314 680,338 680,608 930,584" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="614" y="454" width="132" height="18" rx="6" fill="#f8fafc"/>
+<text x="680" y="467" class="label" text-anchor="middle">affected_user_id</text>
+<text x="436" y="308" class="label">0..1</text>
+<text x="902" y="578" class="label">many</text>
+<polyline points="850,338 890,338 890,584 930,584" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="821" y="442" width="139" height="18" rx="6" fill="#f8fafc"/>
+<text x="890" y="455" class="label" text-anchor="middle">related_record_id</text>
+<text x="856" y="332" class="label">0..1</text>
+<text x="902" y="578" class="label">many</text>
+<rect x="80" y="220" width="350" height="188" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="80" y="220" width="350" height="34" rx="10" fill="#0f766e"/>
+<rect x="80" y="244" width="350" height="10" fill="#0f766e"/>
+<text x="94" y="242" class="title">USERS</text>
+<line x1="80" y1="254" x2="430" y2="254" stroke="#cbd5e1" stroke-width="1"/>
+<text x="94" y="274" class="field">user_id (PK)</text>
+<text x="94" y="298" class="field">full_name</text>
+<text x="94" y="322" class="field">email</text>
+<text x="94" y="346" class="field">role_id</text>
+<text x="94" y="370" class="field">status</text>
+<rect x="500" y="220" width="350" height="236" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="500" y="220" width="350" height="34" rx="10" fill="#0f766e"/>
+<rect x="500" y="244" width="350" height="10" fill="#0f766e"/>
+<text x="514" y="242" class="title">DEATH_RECORDS</text>
+<line x1="500" y1="254" x2="850" y2="254" stroke="#cbd5e1" stroke-width="1"/>
+<text x="514" y="274" class="field">record_id (PK)</text>
+<text x="514" y="298" class="field">tracking_code</text>
+<text x="514" y="322" class="field">deceased_name</text>
+<text x="514" y="346" class="field">status</text>
+<text x="514" y="370" class="field">applicant_user_id</text>
+<text x="514" y="394" class="field">created_by</text>
+<text x="514" y="418" class="field">deleted_by</text>
+<rect x="930" y="80" width="350" height="236" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="930" y="80" width="350" height="34" rx="10" fill="#0f766e"/>
+<rect x="930" y="104" width="350" height="10" fill="#0f766e"/>
+<text x="944" y="102" class="title">NOTIFICATIONS</text>
+<line x1="930" y1="114" x2="1280" y2="114" stroke="#cbd5e1" stroke-width="1"/>
+<text x="944" y="134" class="field">notification_id (PK)</text>
+<text x="944" y="158" class="field">user_id (Reference)</text>
+<text x="944" y="182" class="field">related_record_id (Reference)</text>
+<text x="944" y="206" class="field">title</text>
+<text x="944" y="230" class="field">message</text>
+<text x="944" y="254" class="field">is_read</text>
+<text x="944" y="278" class="field">created_at</text>
+<rect x="930" y="430" width="350" height="308" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="930" y="430" width="350" height="34" rx="10" fill="#0f766e"/>
+<rect x="930" y="454" width="350" height="10" fill="#0f766e"/>
+<text x="944" y="452" class="title">RECORD_ACTIVITY_LOGS</text>
+<line x1="930" y1="464" x2="1280" y2="464" stroke="#cbd5e1" stroke-width="1"/>
+<text x="944" y="484" class="field">log_id (PK)</text>
+<text x="944" y="508" class="field">related_record_id (Reference)</text>
+<text x="944" y="532" class="field">actor_user_id (Reference)</text>
+<text x="944" y="556" class="field">affected_user_id (Reference)</text>
+<text x="944" y="580" class="field">action_type</text>
+<text x="944" y="604" class="field">old_status</text>
+<text x="944" y="628" class="field">new_status</text>
+<text x="944" y="652" class="field">remarks</text>
+<text x="944" y="676" class="field">details</text>
+<text x="944" y="700" class="field">created_at</text>
+<rect x="40" y="880" width="1240" height="34" rx="8" fill="#e2e8f0"/>
+<text x="56" y="902" class="legend">Dashed lines represent application-level references only.</text>
+</svg>

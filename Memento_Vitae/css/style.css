@@ -6,8 +6,8 @@ body{
   margin:0;
   font-family:"Geologica", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(214, 177, 90, 0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(184, 133, 34, 0.12), transparent 22%),
+    radial-gradient(circle at top left, rgba(179, 0, 0, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(255, 157, 0, 0.12), transparent 22%),
     linear-gradient(180deg, #0b0b0f 0%, #121216 48%, #101014 100%);
   color:#f3efe8;
   min-height:100vh;
@@ -50,26 +50,8 @@ body.app-dashboard-page{
   padding:0;
 }
 
-body.app-content-page{
-  background:
-    linear-gradient(rgba(9, 9, 9, 0.72), rgba(9, 9, 9, 0.72)),
-    url("../assets/home-hero.jpg");
-  background-position:center;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-attachment:fixed;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:28px 24px;
-}
-
 body.app-dashboard-page::before,
-body.app-dashboard-page::after,
-body.app-content-page::before,
-body.app-content-page::after{
+body.app-dashboard-page::after{
   display:none;
 }
 
@@ -322,7 +304,7 @@ body::after{
 body::before{
   left:-90px;
   top:8%;
-  background:rgba(184, 133, 34, 0.22);
+  background:rgba(179, 0, 0, 0.22);
 }
 
 body::after{
@@ -438,7 +420,7 @@ body::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg, rgba(255,255,255,0.06), transparent 35%, transparent 65%, rgba(201, 152, 45, 0.08));
+  background:linear-gradient(135deg, rgba(255,255,255,0.06), transparent 35%, transparent 65%, rgba(179,0,0,0.08));
   pointer-events:none;
 }
 
@@ -519,8 +501,8 @@ input:focus,
 select:focus,
 textarea:focus{
   outline:none;
-  border-color:rgba(214, 177, 90, 0.58);
-  box-shadow:0 0 0 4px rgba(184, 133, 34, 0.18);
+  border-color:rgba(255, 127, 80, 0.6);
+  box-shadow:0 0 0 4px rgba(179, 0, 0, 0.18);
   background:rgba(255,255,255,0.09);
 }
 
@@ -536,21 +518,21 @@ button, .btn{
   margin-top:12px;
   border:none;
   border-radius:16px;
-  background:linear-gradient(180deg, #d6b15a 0%, #b88522 100%);
-  color:#1f1a12;
+  background:linear-gradient(135deg, #a50000 0%, #cf0707 52%, #ff6a00 100%);
+  color:#fff;
   font-weight:700;
   letter-spacing:0.2px;
   cursor:pointer;
   text-decoration:none;
   text-align:center;
-  box-shadow:0 0 18px rgba(214, 177, 90, 0.34), 0 14px 28px rgba(155, 114, 24, 0.28);
+  box-shadow:0 18px 32px rgba(165, 0, 0, 0.24);
   transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 button:hover, .btn:hover{
   filter:brightness(1.05);
   transform:translateY(-1px);
-  box-shadow:0 0 22px rgba(224, 190, 115, 0.42), 0 18px 34px rgba(155, 114, 24, 0.32);
+  box-shadow:0 20px 36px rgba(165, 0, 0, 0.32);
 }
 
 .link{
@@ -585,9 +567,9 @@ button:hover, .btn:hover{
 }
 
 .alert-error{
-  background:rgba(74, 47, 15, 0.74);
-  border-color:rgba(181, 130, 41, 0.44);
-  color:#ffe4b8;
+  background:rgba(69, 18, 18, 0.75);
+  border-color:rgba(176, 50, 50, 0.48);
+  color:#ffc2bc;
 }
 
 .grid{
@@ -645,71 +627,6 @@ button:hover, .btn:hover{
   width:92%;
   max-width:1160px;
   margin:20px auto;
-}
-
-body.app-content-page .page-shell{
-  width:min(100%, 1160px);
-  margin:0 auto;
-}
-
-body.app-content-page .card{
-  max-width:760px;
-  background:#3b342d;
-  box-shadow:0 28px 60px rgba(0,0,0,0.44);
-}
-
-body.app-content-page .card::before{
-  background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent 42%, rgba(201, 152, 45, 0.08));
-}
-
-body.app-content-page .panel{
-  background:#2d2621;
-  border-color:rgba(255,255,255,0.08);
-}
-
-body.app-content-page .data-table{
-  background:#211c18;
-}
-
-body.app-content-page input,
-body.app-content-page select,
-body.app-content-page textarea{
-  background:#2b2b2f;
-  color:#ffffff;
-  border-color:rgba(255,255,255,0.08);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
-}
-
-body.app-content-page input::placeholder,
-body.app-content-page textarea::placeholder{
-  color:#ffffff;
-}
-
-body.app-content-page select option{
-  background:#1c1c22;
-  color:#fff2e8;
-}
-
-body.app-content-page .note{
-  color:#f2e7de;
-}
-
-body.app-content-page .muted,
-body.app-content-page .label{
-  color:#cab9ab;
-}
-
-body.app-content-page .smallbtn{
-  background:rgba(255,255,255,0.06);
-  color:#fff3e4;
-}
-
-body.app-content-page .smallbtn:hover{
-  background:rgba(255,255,255,0.1);
-}
-
-body.app-content-page .helper-list{
-  background:#2d2621;
 }
 
 .panel{
@@ -847,8 +764,8 @@ body.app-content-page .helper-list{
 }
 
 .notification-item.unread{
-  border-color:rgba(201, 152, 45, 0.34);
-  background:rgba(101, 74, 29, 0.34);
+  border-color:rgba(255, 116, 85, 0.34);
+  background:rgba(93, 19, 19, 0.34);
 }
 
 .notification-item h3{
@@ -1016,16 +933,6 @@ body.app-content-page .helper-list{
 .document-status-valid{ color:#98e99b; }
 .document-status-needs-replacement{ color:#ffd27f; }
 .document-status-rejected{ color:#ff9b9b; }
-
-.warning-copy{
-  margin-top:14px;
-  color:#f1d1a1;
-}
-
-.success-copy{
-  margin-top:14px;
-  color:#cde3b1;
-}
 
 .helper-list{
   margin:10px 0 0;

@@ -12,19 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = trim($_POST["fullname"]);
     $email    = trim($_POST["email"]);
     $password = $_POST["password"];
-    $confirm_password = $_POST["confirm_password"] ?? "";
     $form["fullname"] = $fullname;
     $form["email"] = $email;
 
     // Public registration always USER
     $role_id = ROLE_USER;
 
-    if ($fullname == "" || $email == "" || $password == "" || $confirm_password == "") {
+    if ($fullname == "" || $email == "" || $password == "") {
         $message = "Please fill out all fields.";
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $message = "Please enter a valid email address.";
-    } else if ($password !== $confirm_password) {
-        $message = "Passwords do not match.";
     } else if (strlen($password) < 8) {
         $message = "Password must be at least 8 characters long.";
     } else {
@@ -112,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" name="fullname" placeholder="Full Name" value="<?php echo e($form["fullname"]); ?>" required>
         <input type="email" name="email" placeholder="Email" value="<?php echo e($form["email"]); ?>" required>
         <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Re-type Password" required>
         <button type="submit">Register</button>
       </form>
 
